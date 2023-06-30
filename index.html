@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Kantar</title>
+</head>
+<body>
+
+    <label for="dateInput">Please enter a date:</label>
+  <input type="date" id="dateInput">
+  <button onclick="processDateInput()">Submit</button>
+  <br>
+  <textarea id="guidanceTextArea" rows="5" cols="30" readonly></textarea>
+
+  <script>
+    function processDateInput() {
+      var inputDate = document.getElementById("dateInput").value;
+
+      // Add your logic to determine the strategy and set the guidance in the guidanceTextArea
+      var guidance = determineStrategy(inputDate);
+
+      document.getElementById("guidanceTextArea").value = guidance;
+    }
+
+    function determineStrategy(inputDate) {
+      // Add your logic to determine the strategy based on the input date
+      // You can use conditional statements or any other approach you prefer
+
+      // Return the corresponding guidance based on the strategy
+      return "Based on the date you provided your strategy should be:" + inputDate;
+    }
+  </script>
+    
+</body>
+</html>
